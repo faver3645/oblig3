@@ -147,9 +147,6 @@ function sendBillett() {
     if (validerBillett(billett)) {
         $.post("/lagre", billett, function () {
             hentAlle();
-        }).fail(function(jqXHR){
-            const json = $.parseJSON(jqXHR.responseText);
-            $("#feilLagre").html(json.message);
         });
         $("#valgtFilm").val("");
         $("#antall").val("");
