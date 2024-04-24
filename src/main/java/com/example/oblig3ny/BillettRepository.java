@@ -20,11 +20,11 @@ public class BillettRepository {
                 innBillett.getEtternavn(), innBillett.getTelefonnr(), innBillett.getEpost());
     }
 
-    public List<Billett> HentAlleBilletter(){
+    public List<Billett> hentAlleBilletter(){
         String sql = "SELECT * FROM Billett";
-        List<Billett> AlleBilletter = db.query(sql,new BeanPropertyRowMapper(Billett.class));
-        Collections.sort(AlleBilletter);
-        return AlleBilletter;
+        List<Billett> alleBilletter = db.query(sql,new BeanPropertyRowMapper(Billett.class));
+        Collections.sort(alleBilletter);
+        return alleBilletter;
     }
 
     public void slettAlleBilletter(){

@@ -24,7 +24,7 @@ public class HomeController {
 
     @GetMapping("/hentAlle")
     public List<Billett> hentAlle(){
-        return rep.HentAlleBilletter();
+        return rep.hentAlleBilletter();
     }
 
     @GetMapping("/slettAlle")
